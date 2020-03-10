@@ -19,11 +19,11 @@ cd ./
 
 curl -OL https://www.sqlite.org/2020/sqlite-autoconf-${VERSION}.tar.gz
 tar -xvf ./sqlite-autoconf-${VERSION}.tar.gz
-rm -r ./sqlite/*
+rm -r ./sqlite3/*
 mkdir ./${VERSION}
-mv ./sqlite-autoconf-${VERSION}/sqlite3.c ./sqlite/sqlite3.c
-mv ./sqlite-autoconf-${VERSION}/sqlite3.h ./sqlite/sqlite3.h
-mv ./sqlite-autoconf-${VERSION}/sqlite3ext.h ./sqlite/sqlite3ext.h
+mv ./sqlite-autoconf-${VERSION}/sqlite3.c ./sqlite3/sqlite3.c
+mv ./sqlite-autoconf-${VERSION}/sqlite3.h ./sqlite3/sqlite3.h
+mv ./sqlite-autoconf-${VERSION}/sqlite3ext.h ./sqlite3/sqlite3ext.h
 rm ./sqlite-autoconf-${VERSION}.tar.gz
 rm -r ./sqlite-autoconf-${VERSION}/*
 rm -r ./sqlite-autoconf-${VERSION}
