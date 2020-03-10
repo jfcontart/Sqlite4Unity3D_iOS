@@ -193,6 +193,15 @@ cd ..
 cd ..
 cd ..
 mkdir ./${VERSION}
+mkdir ./${VERSION}/armv7
+mkdir ./${VERSION}/armv7s
+mkdir ./${VERSION}/arm64
+mkdir ./${VERSION}/x86_64
+cp ./tmp/${VERSION}/sqlite-autoconf-${VERSION}/armv7/libsqlite3.a ./${VERSION}/armv7/libsqlite3.a
+cp ./tmp/${VERSION}/sqlite-autoconf-${VERSION}/armv7s/libsqlite3.a ./${VERSION}/armv7s/libsqlite3.a
+cp ./tmp/${VERSION}/sqlite-autoconf-${VERSION}/arm64/libsqlite3.a ./${VERSION}/arm64/libsqlite3.a
+cp ./tmp/${VERSION}/sqlite-autoconf-${VERSION}/x86_64/libsqlite3.a ./${VERSION}/x86_64/libsqlite3.a
+
 
 lipo -create -output "./${VERSION}/libsqlite3.a" "./tmp/${VERSION}/sqlite-autoconf-${VERSION}/armv7/libsqlite3.a" "./tmp/${VERSION}/sqlite-autoconf-${VERSION}/armv7s/libsqlite3.a" "./tmp/${VERSION}/sqlite-autoconf-${VERSION}/arm64/libsqlite3.a" "./tmp/${VERSION}/sqlite-autoconf-${VERSION}/x86_64/libsqlite3.a"
 
