@@ -1,15 +1,16 @@
 #!/usr/bin/env bash
 
-# Version example : 3310100
+# Version example : 2020 3310100
 
-if [ "$#" -ne 1 ]
+if [ "$#" -ne 2 ]
 then
     echo "Usage:"
-    echo "./SQLiteBuilt.sh <VERSION>"
+    echo "./SQLiteBuilt.sh <YEAR> <VERSION>"
     exit 1
 fi
 
-VERSION=$1
+VERSION=$2
+YEAR=$1
 
 DEVELOPER=$(xcode-select -print-path)
 TOOLCHAIN_BIN="${DEVELOPER}/Toolchains/XcodeDefault.xctoolchain/usr/bin"
@@ -30,7 +31,7 @@ cd ./tmp/${VERSION}/
 
 #Download sources files from SQLite
 
-curl -OL https://www.sqlite.org/2021/sqlite-autoconf-${VERSION}.tar.gz
+curl -OL https://www.sqlite.org/${YEAR}/sqlite-autoconf-${VERSION}.tar.gz
 tar -xvf sqlite-autoconf-${VERSION}.tar.gz
 ls 
 cd sqlite-autoconf-${VERSION}

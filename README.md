@@ -21,7 +21,7 @@ Use the SQLiteBuilt_iOS.sh default
 
 ```
 cd <this directory>
-./SQLiteBuilt_iOS.sh <version example:4.3.0>
+./SQLiteBuilt_iOS.sh <year> <version example:4.3.0>
 ```
 All is automatic!
 
