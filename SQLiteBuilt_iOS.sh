@@ -30,7 +30,7 @@ cd ./tmp/${VERSION}/
 
 #Download sources files from SQLite
 
-curl -OL https://www.sqlite.org/2020/sqlite-autoconf-${VERSION}.tar.gz
+curl -OL https://www.sqlite.org/2021/sqlite-autoconf-${VERSION}.tar.gz
 tar -xvf sqlite-autoconf-${VERSION}.tar.gz
 ls 
 cd sqlite-autoconf-${VERSION}
